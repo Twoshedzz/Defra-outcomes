@@ -1,0 +1,13 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Auth: app/config.json sets useAuth false for a public demo. For password protection,
+# set USE_AUTH=true and PASSWORD in the Render dashboard (and useAuth true in config).
+
+services:
+  - type: web
+    name: defra-outcomes
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production

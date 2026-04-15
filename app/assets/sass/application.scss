@@ -42,6 +42,10 @@ $defra-pillar-pink: #d53880;
   &--4 {
     border-left-color: #d4351c; // red
   }
+
+  &--resilience {
+    border-left-color: $defra-green;
+  }
 }
 
 .defra-outcome-block--divider {
@@ -52,33 +56,44 @@ $defra-pillar-pink: #d53880;
   max-width: 40rem;
 }
 
-.defra-resilience-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  padding: 0;
-  list-style: none;
-
-  @media (min-width: 40.0625em) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: 48.0625em) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.defra-resilience-grid__item {
-  margin: 0;
-}
-
-.defra-resilience-card {
-  padding: 15px;
-  border: 1px solid $defra-green;
-  min-height: 100%;
-  box-sizing: border-box;
-}
-
 .defra-accordion-sos {
   margin-top: 25px;
+}
+
+.defra-accordion-resilience {
+  margin-top: 15px;
+}
+
+// Outcome titles (accordion section headings) must read larger than owner lines below
+.defra-accordion-sos,
+.defra-accordion-resilience {
+  .govuk-accordion__section-button {
+    font-size: 1.3125rem; // 21px — govuk-heading-m mobile
+    line-height: 1.25;
+    font-weight: 700;
+
+    @media (min-width: 40.0625em) {
+      font-size: 1.5rem; // 24px — govuk-heading-m tablet+
+    }
+  }
+
+  // Owner preview under the title — stays body-sized
+  .govuk-accordion__section-summary {
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: 400;
+  }
+}
+
+// Owner lines sit below the outcome title — keep clearly smaller than h4 / accordion headings
+.defra-outcome-owner-block {
+  .govuk-summary-list__key {
+    font-size: 0.875rem;
+    line-height: 1.25;
+  }
+
+  .govuk-summary-list__value {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
 }

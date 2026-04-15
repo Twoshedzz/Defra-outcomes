@@ -28,8 +28,21 @@ router.get('/outcomes', (req, res) => {
     }
   })
 
+  const resilienceOutcomes = outcomesData.resilienceSection.outcomes
+  const resilienceAccordionItems = resilienceOutcomes.map((outcome, index) => ({
+    heading: { text: `${index + 1}. ${outcome.text}` },
+    content: {
+      html: env.render('outcomes/partials/resilience-outcome-body.html', {
+        outcome,
+        eipNoteText: outcomesData.eipNoteText
+      })
+    }
+  }))
+
   res.render('outcomes/index.html', {
     outcomes: outcomesData,
-    sosAccordionItems
+    sosAccordionItems,
+    resilienceAccordionItems,
+    resilienceOutcomeCount: resilienceOutcomes.length
   })
 })

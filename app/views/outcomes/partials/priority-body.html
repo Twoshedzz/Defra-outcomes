@@ -1,7 +1,7 @@
 <div class="defra-pillar-panel defra-pillar-panel--{{ priority.pillarIndex }}">
   {% for outcome in priority.outcomes %}
     <div class="defra-outcome-block {% if not loop.first %}govuk-!-padding-top-4 govuk-!-margin-top-4 defra-outcome-block--divider{% endif %}">
-      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">{{ outcome.text }}</h4>
+      <h4 class="govuk-heading-m govuk-!-margin-bottom-2">{{ outcome.text }}</h4>
 
       {% include "outcomes/partials/outcome-owners.html" %}
 

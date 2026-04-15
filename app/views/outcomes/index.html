@@ -36,23 +36,14 @@
       <h2 class="govuk-heading-l" id="resilience-heading">{{ outcomes.resilienceSection.title }}</h2>
       <p class="govuk-body-l">{{ outcomes.resilienceSection.intro }}</p>
 
-      <h3 class="govuk-heading-m govuk-!-margin-top-6 govuk-!-margin-bottom-3">Outcomes in this tier</h3>
-      <ul class="defra-resilience-grid govuk-list">
-        {% for outcome in outcomes.resilienceSection.outcomes %}
-          <li class="defra-resilience-grid__item">
-            <div class="defra-resilience-card">
-              <h4 class="govuk-heading-s govuk-!-margin-bottom-2">{{ outcome.text }}</h4>
-              {% include "outcomes/partials/outcome-owners.html" %}
-              {% if outcome.eip %}
-                <p class="govuk-body govuk-body-s govuk-!-margin-bottom-0 govuk-!-margin-top-2 defra-eip-note">
-                  <span class="govuk-tag govuk-!-margin-right-2">EIP</span>
-                  {{ outcomes.eipNoteText }}
-                </p>
-              {% endif %}
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
+      <p class="govuk-body govuk-!-margin-top-6 govuk-!-margin-bottom-1">There are {{ resilienceOutcomeCount }} outcomes in this tier. Expand a section to see outcome owner details.</p>
+
+      {{ govukAccordion({
+        id: "defra-resilience-outcomes",
+        headingLevel: 3,
+        classes: "defra-accordion-resilience",
+        items: resilienceAccordionItems
+      }) }}
     </section>
 
     <p class="govuk-body govuk-!-margin-top-8">

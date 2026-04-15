@@ -1,4 +1,9 @@
 {
+  "name": "defra-outcomes",
+  "license": "MIT",
+  "engines": {
+    "node": "^18.x || ^20.x || ^22.x"
+  },
   "scripts": {
     "dev": "govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
