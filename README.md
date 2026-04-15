@@ -26,7 +26,7 @@ The kit is a **Node web app** (not static hosting). On [Render](https://render.c
    - **`PASSWORD`** — **Required** in production. Set a strong secret and share it with people who should open the prototype ([kit publishing](https://prototype-kit.service.gov.uk/docs/publishing-on-the-web)). Without this you see “Password not set.”
    - **`USE_HTTPS`** = `false` — Recommended on Render so the app does not force HTTPS inside the container (TLS is already terminated at Render’s edge). You can set this in the dashboard *or* rely on `"useHttps": false` in `app/config.json` (this repo sets that by default).
 
-Optional: use the included `render.yaml` as a Blueprint or copy its settings into an existing service. Do **not** commit `PASSWORD` to git—add it only in Render.
+Configure the service **only in the Render dashboard** (do not rely on a committed `render.yaml` for secrets—Blueprint sync can overwrite or conflict with dashboard env vars). Do **not** commit `PASSWORD` to git.
 
 ## Licence
 
