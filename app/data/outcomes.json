@@ -1,0 +1,232 @@
+{
+  "frameworkTitle": "Defra Outcomes Framework",
+  "sourceNote": "Structured from content/reference-defra-outcomes-framework.md. Confirm against Defra’s official source before formal publishing.",
+  "vision": {
+    "headline": "Restoring nature, supporting growth, enhancing security",
+    "description": "As the steward of our natural resources, we strengthen the foundations of our economy and our national security."
+  },
+  "sosSection": {
+    "title": "Secretary of State priorities and outcomes",
+    "intro": "To achieve the Secretary of State’s priorities over this parliament we will deliver these outcomes:",
+    "tierLabel": "Priority delivery",
+    "secretaryOfStatePriorities": [
+      {
+        "id": "sos-1",
+        "pillarIndex": 1,
+        "pillarKey": "nature",
+        "pillarShortLabel": "Nature and development",
+        "title": "Restoring nature while supporting development",
+        "outcomes": [
+          {
+            "text": "Housing and infrastructure that is environmentally positive",
+            "owner": {
+              "name": "Toby Nation",
+              "role": "Director Environmental Quality, Infrastructure and Planning"
+            },
+            "eip": false
+          },
+          {
+            "text": "Thriving habitats and wildlife",
+            "owner": {
+              "name": "Deb Hankins",
+              "role": "Director Biodiversity, Land Use and Investment"
+            },
+            "eip": true
+          },
+          {
+            "text": "Thriving, productive seas",
+            "owner": {
+              "name": "Gareth Baynham-Hughes",
+              "role": "Director Marine and Fisheries"
+            },
+            "eip": true
+          },
+          {
+            "text": "Nature accessible and enjoyable for all",
+            "owner": {
+              "name": "Edward Barker",
+              "role": "Director Strategy, Governance and Climate"
+            },
+            "eip": true
+          }
+        ]
+      },
+      {
+        "id": "sos-2",
+        "pillarIndex": 2,
+        "pillarKey": "water",
+        "pillarShortLabel": "Water system",
+        "title": "Reforming our water system so it drives growth, protects consumers and enhances the environment",
+        "outcomes": [
+          {
+            "text": "Resilient, reliable and safe supply of water to homes and businesses",
+            "owner": {
+              "name": "David Hallam",
+              "role": "Director Floods and Water"
+            },
+            "eip": true
+          },
+          {
+            "text": "Clean rivers, lakes and seas",
+            "owner": {
+              "name": "David Hallam",
+              "role": "Director Floods and Water"
+            },
+            "eip": true
+          }
+        ]
+      },
+      {
+        "id": "sos-3",
+        "pillarIndex": 3,
+        "pillarKey": "farming",
+        "pillarShortLabel": "Farming and food",
+        "title": "Backing British farming and food industry to boost production",
+        "outcomes": [
+          {
+            "text": "Profitable, productive, sustainable farming sector",
+            "owner": {
+              "name": "Mike Rowe",
+              "role": "Director Farming and Countryside"
+            },
+            "eip": true
+          },
+          {
+            "text": "Profitable and resilient food sector that provides affordable, nutritious food",
+            "owners": [
+              {
+                "name": "Charlotte Baker",
+                "role": "Director Agri-Food Chain"
+              },
+              {
+                "name": "Tessa Jones",
+                "role": "Director Agri-Food Chain"
+              }
+            ],
+            "eip": true
+          }
+        ]
+      },
+      {
+        "id": "sos-4",
+        "pillarIndex": 4,
+        "pillarKey": "trade",
+        "pillarShortLabel": "Trade relationships",
+        "title": "Resetting trading relationships, including with the EU",
+        "outcomes": [
+          {
+            "text": "Trade barriers with the EU reduced for food, plants and animals",
+            "owner": {
+              "name": "Mark Thompson",
+              "role": "Director Trade Delivery and EU Reset Government Legislation"
+            },
+            "eip": false
+          },
+          {
+            "text": "Increased trade that supports domestic production, high food standards and downward pressure on food prices",
+            "owner": {
+              "name": "Sophie Brice",
+              "role": "Director EU and International Trade"
+            },
+            "eip": false
+          }
+        ]
+      }
+    ]
+  },
+  "resilienceSection": {
+    "id": "resilience-security",
+    "title": "Resilience and Security outcomes",
+    "tierLabel": "Cross-cutting resilience",
+    "intro": "Defra is responsible for strengthening national security and resilience, the stewardship of critical national infrastructure and helping protect and restore critical global ecosystems.",
+    "outcomes": [
+      {
+        "text": "Lower greenhouse gas emissions",
+        "owner": {
+          "name": "Edward Barker",
+          "role": "Director Strategy, Governance and Climate"
+        },
+        "eip": true
+      },
+      {
+        "text": "Climate adaptation",
+        "owner": {
+          "name": "Edward Barker",
+          "role": "Director Strategy, Governance and Climate"
+        },
+        "eip": true
+      },
+      {
+        "text": "Protection from pollution and environmental hazards",
+        "owner": {
+          "name": "Toby Nation",
+          "role": "Director Environmental Quality, Infrastructure and Planning"
+        },
+        "eip": true
+      },
+      {
+        "text": "Minimise waste, tackle waste crime, maximise use of resources",
+        "owner": {
+          "name": "Simon James",
+          "role": "Director Circular Economy"
+        },
+        "eip": true
+      },
+      {
+        "text": "Resilience to flooding",
+        "owner": {
+          "name": "Sebastian Catovsky",
+          "role": "Director Floods and Water"
+        },
+        "eip": true
+      },
+      {
+        "text": "Emergency preparedness and response to environmental incidents, disease outbreaks, food and water supply shocks",
+        "owner": {
+          "name": "Rebecca Shrubsole",
+          "role": "Director Ministerial, Growth and Resilience"
+        },
+        "eip": true
+      },
+      {
+        "text": "Robust biosecurity",
+        "owner": {
+          "name": "Anjali Juneja",
+          "role": "Director Animal and Plant Health and Welfare"
+        },
+        "eip": true
+      },
+      {
+        "text": "Good animal welfare",
+        "owner": {
+          "name": "Anjali Juneja",
+          "role": "Director Animal and Plant Health and Welfare"
+        },
+        "eip": true
+      },
+      {
+        "text": "Secure food supply",
+        "owners": [
+          {
+            "name": "Charlotte Baker",
+            "role": "Director Agri-Food Chain"
+          },
+          {
+            "name": "Tessa Jones",
+            "role": "Director Agri-Food Chain"
+          }
+        ],
+        "eip": true
+      },
+      {
+        "text": "Flourishing rural communities",
+        "owner": {
+          "name": "Edward Barker",
+          "role": "Director Strategy, Governance and Climate"
+        },
+        "eip": false
+      }
+    ]
+  },
+  "eipNoteText": "This outcome contains targets that are part of the Environmental Improvement Plan."
+}

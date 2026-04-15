@@ -1,0 +1,84 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+//
+
+// Defra outcomes hierarchy (visual echo of the infographic — semantic structure is in HTML)
+// GDS colour refs: https://design-system.service.gov.uk/styles/colour/
+
+$defra-green: #00703c;
+$defra-light-grey: #f3f2f1;
+$defra-border: #b1b4b6;
+$defra-pillar-pink: #d53880;
+
+.defra-vision-panel {
+  padding: 20px 25px;
+  border-left: 5px solid $defra-green;
+  background: $defra-light-grey;
+}
+
+.defra-resilience-panel {
+  padding: 25px;
+  border: 2px solid $defra-green;
+  background: #ffffff;
+}
+
+.defra-pillar-panel {
+  padding-left: 15px;
+  border-left: 5px solid $defra-border;
+
+  &--1 {
+    border-left-color: #4c2c92; // purple
+  }
+
+  &--2 {
+    border-left-color: #1d70b8; // blue
+  }
+
+  &--3 {
+    border-left-color: $defra-pillar-pink;
+  }
+
+  &--4 {
+    border-left-color: #d4351c; // red
+  }
+}
+
+.defra-outcome-block--divider {
+  border-top: 1px solid $defra-border;
+}
+
+.defra-eip-note {
+  max-width: 40rem;
+}
+
+.defra-resilience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 40.0625em) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 48.0625em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.defra-resilience-grid__item {
+  margin: 0;
+}
+
+.defra-resilience-card {
+  padding: 15px;
+  border: 1px solid $defra-green;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.defra-accordion-sos {
+  margin-top: 25px;
+}

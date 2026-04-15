@@ -1,0 +1,35 @@
+//
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/create-routes
+//
+
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
+
+const outcomesData = require('./data/outcomes.json')
+
+router.get('/outcomes', (req, res) => {
+  const env = req.app.get('nunjucksEnv')
+  const priorities = outcomesData.sosSection.secretaryOfStatePriorities
+
+  const sosAccordionItems = priorities.map((priority) => {
+    const count = priority.outcomes.length
+    const summary = `${priority.pillarShortLabel} · ${count} outcome${count !== 1 ? 's' : ''}`
+
+    return {
+      heading: { text: `${priority.pillarIndex}. ${priority.title}` },
+      summary: { text: summary },
+      content: {
+        html: env.render('outcomes/partials/priority-body.html', {
+          priority,
+          eipNoteText: outcomesData.eipNoteText
+        })
+      }
+    }
+  })
+
+  res.render('outcomes/index.html', {
+    outcomes: outcomesData,
+    sosAccordionItems
+  })
+})

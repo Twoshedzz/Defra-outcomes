@@ -1,0 +1,16 @@
+<div class="defra-pillar-panel defra-pillar-panel--{{ priority.pillarIndex }}">
+  {% for outcome in priority.outcomes %}
+    <div class="defra-outcome-block {% if not loop.first %}govuk-!-padding-top-4 govuk-!-margin-top-4 defra-outcome-block--divider{% endif %}">
+      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">{{ outcome.text }}</h4>
+
+      {% include "outcomes/partials/outcome-owners.html" %}
+
+      {% if outcome.eip %}
+        <p class="govuk-body govuk-body-s govuk-!-margin-bottom-0 defra-eip-note">
+          <span class="govuk-tag govuk-!-margin-right-2">EIP</span>
+          {{ eipNoteText }}
+        </p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

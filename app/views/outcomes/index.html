@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% set pageName = "Outcomes framework" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">{{ outcomes.frameworkTitle }}</h1>
+
+    <p class="govuk-body">{{ outcomes.sourceNote }}</p>
+
+    <section class="defra-vision-panel govuk-!-margin-bottom-8" aria-labelledby="defra-vision-heading">
+      <p class="govuk-caption-m govuk-!-margin-bottom-1">Defra vision</p>
+      <h2 class="govuk-heading-l" id="defra-vision-heading">{{ outcomes.vision.headline }}</h2>
+      <p class="govuk-body">{{ outcomes.vision.description }}</p>
+    </section>
+
+    <section class="govuk-!-margin-bottom-8" aria-labelledby="sos-priorities-heading">
+      <p class="govuk-caption-m govuk-!-margin-bottom-1">{{ outcomes.sosSection.tierLabel }}</p>
+      <h2 class="govuk-heading-l" id="sos-priorities-heading">{{ outcomes.sosSection.title }}</h2>
+      <p class="govuk-body-l">{{ outcomes.sosSection.intro }}</p>
+
+      {{ govukAccordion({
+        id: "defra-sos-priorities",
+        headingLevel: 3,
+        classes: "defra-accordion-sos",
+        items: sosAccordionItems
+      }) }}
+    </section>
+
+    <section class="defra-resilience-panel govuk-!-margin-bottom-8" aria-labelledby="resilience-heading">
+      <p class="govuk-caption-m govuk-!-margin-bottom-1">{{ outcomes.resilienceSection.tierLabel }}</p>
+      <h2 class="govuk-heading-l" id="resilience-heading">{{ outcomes.resilienceSection.title }}</h2>
+      <p class="govuk-body-l">{{ outcomes.resilienceSection.intro }}</p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-top-6 govuk-!-margin-bottom-3">Outcomes in this tier</h3>
+      <ul class="defra-resilience-grid govuk-list">
+        {% for outcome in outcomes.resilienceSection.outcomes %}
+          <li class="defra-resilience-grid__item">
+            <div class="defra-resilience-card">
+              <h4 class="govuk-heading-s govuk-!-margin-bottom-2">{{ outcome.text }}</h4>
+              {% include "outcomes/partials/outcome-owners.html" %}
+              {% if outcome.eip %}
+                <p class="govuk-body govuk-body-s govuk-!-margin-bottom-0 govuk-!-margin-top-2 defra-eip-note">
+                  <span class="govuk-tag govuk-!-margin-right-2">EIP</span>
+                  {{ outcomes.eipNoteText }}
+                </p>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <p class="govuk-body govuk-!-margin-top-8">
+      <a class="govuk-link" href="/">Back to start</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
