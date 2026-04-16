@@ -7,6 +7,7 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 const outcomesData = require('./data/outcomes.json')
+const outcomesTableData = require('./data/outcomes-table.json')
 
 router.get('/outcomes', (req, res) => {
   const env = req.app.get('nunjucksEnv')
@@ -53,5 +54,20 @@ router.get('/outcomes-static', (req, res) => {
     priorities: outcomesData.sosSection.secretaryOfStatePriorities,
     resilienceOutcomes: outcomesData.resilienceSection.outcomes,
     resilienceOutcomeCount: outcomesData.resilienceSection.outcomes.length
+  })
+})
+
+router.get('/outcomes-table', (req, res) => {
+  const tableRows = outcomesTableData.rows.map((row) => ([
+    { text: String(row[0]) },
+    { text: row[1] },
+    { text: row[2] },
+    { text: row[3] },
+    { text: row[4] }
+  ]))
+
+  res.render('outcomes/table.html', {
+    tableData: outcomesTableData,
+    tableRows
   })
 })

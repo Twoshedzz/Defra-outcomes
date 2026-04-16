@@ -9,12 +9,8 @@
 
     <h1 class="govuk-heading-xl">{{ outcomes.frameworkTitle }}</h1>
 
-    <p class="govuk-body">{{ outcomes.sourceNote }}</p>
-
-    <p class="govuk-body govuk-!-margin-bottom-7">
-      Prefer expandable sections?
-      <a class="govuk-link" href="/outcomes">View the accordion version</a>.
-    </p>
+    {% set currentView = "static" %}
+    {% include "outcomes/partials/view-nav.html" %}
 
     <section class="defra-vision-panel govuk-!-margin-bottom-8" aria-labelledby="defra-vision-heading">
       <p class="govuk-caption-m govuk-!-margin-bottom-1">Defra vision</p>

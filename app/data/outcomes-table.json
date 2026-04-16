@@ -1,0 +1,33 @@
+{
+  "title": "Defra outcomes table (reference style)",
+  "intro": "This table emulates the source reference document structure: 20 outcomes with DG owner, outcome owner (SRO), and supporting notes.",
+  "columns": [
+    "#",
+    "Outcome",
+    "DG owner",
+    "Outcome owner (SRO)",
+    "Other information"
+  ],
+  "rows": [
+    [1, "Housing and infrastructure that is environmentally positive", "Sally Randall", "Toby Nation", "Built environment and development interface with nature outcomes."],
+    [2, "Thriving habitats and wildlife", "Sally Randall", "Deb Hankins", "Nature recovery (habitats/species) outcome."],
+    [3, "Thriving, productive seas", "Sally Randall", "Gareth Baynham-Hughes", "Marine environment and sustainable seas outcome."],
+    [4, "A resilient, reliable and safe supply of water to homes and businesses", "David Hill", "David Hallam", "Water supply and resilience outcome."],
+    [5, "Clean rivers, lakes and seas", "David Hill", "David Hallam", "Water quality outcome (freshwater and marine)."],
+    [6, "Profitable, productive, sustainable farming sector", "Emily Miles", "Mike Rowe", "Agriculture productivity and sustainability outcome."],
+    [7, "Profitable and resilient food sector that provides affordable, nutritious food", "Emily Miles", "Charlotte Baker / Tessa Jones", "Food system resilience, affordability and nutrition outcome."],
+    [8, "Trade barriers with the EU reduced for food, plants and animals", "Emma Bourne", "Mark Thompson", "EU trading relationship outcome (SPS and market access)."],
+    [9, "Increased trade that supports domestic production (high food standards) and downward pressure on food prices", "Emma Bourne", "Sophie Brice", "Trade policy outcome (standards and affordability)."],
+    [10, "Lower greenhouse gas emissions", "Sally Randall", "Edward Barker", "Mitigation outcome."],
+    [11, "Climate adaptation", "Sally Randall", "Edward Barker", "Adaptation outcome."],
+    [12, "Protection from pollution and environmental hazards", "Sally Randall", "Toby Nation", "Pollution, chemicals, air and wider environmental hazards outcome."],
+    [13, "Minimal waste, maximum use of resources", "Sally Randall", "TBC", "Resources and waste / circular economy outcome (owner to be confirmed)."],
+    [14, "Resilience to flooding", "David Hill", "Sebastian Catovsky", "Flood resilience outcome."],
+    [15, "Emergency preparedness and response to environmental incidents, disease outbreaks, food and water supply shocks", "David Hill", "Rebecca Shrubsole", "Preparedness and response outcome (cross-system shocks)."],
+    [16, "Robust biosecurity", "Emily Miles", "Anjali Juneja", "Biosecurity outcome (plant/animal health interface)."],
+    [17, "Good animal welfare", "Emily Miles", "Anjali Juneja", "Animal welfare outcome."],
+    [18, "Secure food supply", "Emily Miles", "Charlotte Baker / Tessa Jones", "Food security outcome."],
+    [19, "Flourishing rural communities", "Sally Randall", "Edward Barker", "Rural communities outcome."],
+    [20, "Reforming our water system so it drives growth, protects consumers and enhances the environment", "David Hill", "Not specified (water outcomes list David Hallam as SRO)", "Often presented as an umbrella theme alongside outcomes 4 and 5; include only if your framework version counts it as an outcome."]
+  ]
+}
